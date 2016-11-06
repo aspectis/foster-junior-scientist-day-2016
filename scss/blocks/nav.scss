@@ -1,0 +1,22 @@
+.nav {
+	left: ($grid / 2);
+	position: fixed;
+	top: ($grid / 2);
+	z-index: 9;
+}
+
+.nav_link {
+	@extend button;
+}
+
+.nav_restart {
+	display: none;
+
+	.impress-enabled & {
+		display: inline-block;
+	}
+
+	.impress-on-start & {
+		display: none;
+	}
+}

@@ -1,0 +1,6 @@
+@for $i from 1 to 7 {
+	.delay-#{$i} {
+		animation-delay: .2s * $i;
+		transition-delay: .2s * $i;
+	}
+}

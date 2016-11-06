@@ -1,0 +1,10 @@
+.anim-slide-bottom {
+	opacity: 0;
+	transform: translateY(15%);
+	transition: transform 1s, opacity 1s;
+
+	.step.present & {
+		transform: translateY(0);
+		opacity: 1;
+	}
+}

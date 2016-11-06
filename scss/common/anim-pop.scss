@@ -1,0 +1,10 @@
+.anim-pop {
+	opacity: 0;
+	transition: opacity 1s, transform .5s;
+	transform: scale(1.5);
+
+	.step.present & {
+		opacity: 1;
+		transform: scale(1);
+	}
+}

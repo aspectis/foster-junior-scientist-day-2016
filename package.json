@@ -1,0 +1,21 @@
+{
+  "name": "foster-graphic-recordings",
+  "version": "1.0.0",
+  "description": "A web app presenting the graphic recordings of FOSTER Junior Scientist Day 2016",
+  "main": "www/index.html",
+  "author": "Aspectis",
+  "license": "SEE LICENSE IN <LICENSE.md>",
+  "devDependencies": {
+    "browser-sync": "^2.17.5",
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^3.1.1",
+    "gulp-concat": "^2.6.0",
+    "gulp-cssnano": "^2.1.2",
+    "gulp-notify": "^2.2.0",
+    "gulp-sass": "^2.3.2",
+    "gulp-sass-glob": "1.0.6",
+    "gulp-uglify": "^2.0.0",
+    "impress.js": "github:impress/impress.js#0.6.0",
+    "jquery": "^3.1.1"
+  }
+}

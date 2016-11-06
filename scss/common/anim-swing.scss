@@ -1,0 +1,34 @@
+.anim-swing {
+	transform-origin: 50% 0;
+	transform: rotateX(-16deg);
+	transition: transform 1s;
+
+	.step.present & {
+		animation-name: swing;
+		animation-duration: 3s;
+		animation-timing-function: cubic-bezier(0.645, 0.045, 0.355, 1);
+		animation-iteration-count: 1;
+		transform: rotateX(0);
+	}
+}
+
+@keyframes swing {
+	0% {
+		transform: rotateX(-16deg);
+	}
+	20% {
+		transform: rotateX(12deg);
+	}
+	40% {
+		transform: rotateX(-9deg);
+	}
+	60% {
+		transform: rotateX(5deg);
+	}
+	80% {
+		transform: rotateX(-2deg);
+	}
+	100% {
+		transform: rotateX(0);
+	}
+}

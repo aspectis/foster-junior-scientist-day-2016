@@ -1,0 +1,80 @@
+.step {
+	padding: ($grid * 2);
+	margin: 0 auto;
+	perspective: 500px;
+	position: relative;
+	text-align: center;
+	transform-style: preserve-3d; // TODO: Is this required? Maybe in IE.
+	width: 1000px;
+
+	.impress-enabled & {
+		filter: blur(5px);
+		margin: 0;
+		opacity: .1;
+		transition: filter 1s, opacity 1s;
+
+		&.active {
+			filter: blur(0);
+			opacity: 1;
+		}
+	}
+
+	.impress-on-start & {
+		filter: blur(0);
+		opacity: 1;
+		cursor: pointer;
+	}
+
+	a {
+		> img {
+			transition: transform .2s;
+		}
+
+		@include hover {
+			> img {
+				transform: scale(1.2);
+			}
+		}
+	}
+
+	img {
+		vertical-align: middle;
+	}
+
+	p {
+		perspective: inherit;
+	}
+
+	h1 + p,
+	h2 + p,
+	h3 + p,
+	p + p,
+	p + ul,
+	ul + p {
+		margin-top: ($grid * 2);
+	}
+}
+
+.step_list {
+	li {
+		display: inline-block;
+		margin: $grid;
+	}
+}
+
+.step_more {
+	@extend button;
+	@include transition(background, opacity);
+	opacity: 0;
+	position: absolute;
+	right: 0;
+	top: 0;
+
+	.step.present & {
+		opacity: 1;
+	}
+}
+
+.step_separator {
+	margin: $grid 0 ($grid * 2);
+}

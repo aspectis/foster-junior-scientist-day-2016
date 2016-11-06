@@ -1,0 +1,8 @@
+.anim-fade {
+	opacity: 0;
+	transition: opacity 1s;
+
+	.step.present & {
+		opacity: 1;
+	}
+}

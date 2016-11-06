@@ -1,0 +1,15 @@
+.footer {
+	color: $text-color-light;
+	font-size: $font-size-small;
+
+	li {
+		display: inline-block;
+
+		+ li {
+			&::before {
+				content: ' / ';
+			}
+		}
+	}
+}
+

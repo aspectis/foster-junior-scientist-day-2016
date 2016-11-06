@@ -1,0 +1,65 @@
+* {
+	box-sizing: border-box;
+}
+
+html {
+	background: url(bg.png);
+	height: 100%;
+}
+
+body {
+	background: radial-gradient( rgba(#fff, .5), rgba(#bbb, .5));
+	color: $text-color;
+	font: #{$font-size}/#{$grid / $font-size} helvetica, arial, sans-serif;
+	min-height: 100%;
+}
+
+a {
+	@include transition(color);
+	color: $link-color;
+	text-decoration: none;
+
+	@include hover {
+		color: $link-hover-color;
+	}
+}
+
+button {
+	@include transition(background);
+	appearance: none;
+	background: $link-color;
+	border: 0;
+	border-radius: $br;
+	color: #fff;
+	cursor: pointer;
+	display: inline-block;
+	font: inherit;
+	font-size: $font-size-small;
+	font-weight: bold;
+	letter-spacing: 1px;
+	padding: ($grid / 4) ($grid / 2);
+	text-transform: uppercase;
+
+	@include hover {
+		background: $link-hover-color;
+		color: #fff;
+	}
+
+	&::-moz-focus-inner {
+		border: 0;
+		padding: 0;
+	}
+}
+
+img {
+	max-height: 100%;
+	max-width: 100%;
+}
+
+h1 {
+	font-size: ($grid * 2);
+}
+
+h2 {
+	font-size: ($grid * 1.5);
+}

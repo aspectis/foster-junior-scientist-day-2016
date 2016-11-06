@@ -1,0 +1,10 @@
+.anim-slide-right {
+	opacity: 0;
+	transform: translateX(100%);
+	transition: transform 1s, opacity 1s;
+
+	.step.present & {
+		transform: translateX(0);
+		opacity: 1;
+	}
+}

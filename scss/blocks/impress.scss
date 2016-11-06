@@ -1,0 +1,47 @@
+.impress_warning {
+	width: 100%;
+	padding: ($grid * 2.5) ($grid / 2) ($grid / 2);
+	background: #fea;
+
+	.impress-supported & {
+		display: none;
+	}
+}
+
+.impress_hint {
+	background: rgba(#000, .5);
+	bottom: 200px;
+	color: #eee;
+	display: none;
+	font-size: 1.5em;
+	left: 0;
+	line-height: 1.5;
+	opacity: 0;
+	padding: ($grid / 2);
+	position: fixed;
+	right: 0;
+	text-align: center;
+	transform: translateY(400px);
+	transition: opacity 1s, transform .5s 1s;
+	z-index: 9;
+
+	.impress-enabled &.-default {
+		display: block;
+	}
+
+	.impress-enabled.touch-enabled {
+		&.-default {
+			display: none;
+		}
+
+		&.-touch {
+			display: block;
+		}
+	}
+
+	.impress-on-start & {
+		opacity: 1;
+		transform: translateY(0);
+		transition: opacity 1s 5s, transform .5s 4.5s;
+	}
+}

@@ -1,0 +1,119 @@
+.menu {
+	text-align: center;
+	padding: $grid ($grid / 2);
+}
+
+.menu_card {
+	background: #fff;
+	border-radius: $br;
+	box-shadow: $card-shadow;
+	display: block;
+	margin: 0 auto;
+	max-width: ($grid * 24);
+	overflow: hidden;
+}
+
+.menu_heading {
+	border-bottom: 1px solid $border-color;
+	padding: ($grid / 2) $grid;
+
+	@media (max-width: 479px) {
+		padding: ($grid / 2);
+	}
+
+	img {
+		display: block;
+	}
+}
+
+.menu_institution {
+	@include transition(opacity);
+	display: table-cell;
+	padding: ($grid / 2) $grid;
+	vertical-align: middle;
+
+	@media (max-width: 479px) {
+		padding: ($grid / 2);
+	}
+
+	@include hover {
+		opacity: .6;
+	}
+}
+
+.menu_lecturer {
+	display: table-cell;
+	padding: ($grid / 2) $grid;
+
+	@media (max-width: 479px) {
+		padding: ($grid / 2);
+	}
+}
+
+.menu_links {
+	border-top: 1px solid $border-color;
+	display: table;
+	padding: 0;
+	table-layout: fixed;
+	width: 100%;
+}
+
+.menu_link {
+	@include transition(color, background);
+	background: #f7f7f7;
+	color: $text-color;
+	display: table-cell;
+	font-size: $font-size-small;
+	font-weight: bold;
+	height: ($grid * 2.5);
+	letter-spacing: 2px;
+	padding: ($grid / 2);
+	text-transform: uppercase;
+	vertical-align: middle;
+
+	@include hover {
+		background: #fff;
+		color: inherit;
+	}
+
+	@media (max-width: 479px) {
+		padding: ($grid / 4);
+	}
+
+	& + & {
+		border-left: 1px solid $border-color;
+	}
+
+	> img {
+		margin-right: .5em;
+		vertical-align: middle;
+
+		@media (max-width: 479px) {
+			display: block;
+			margin: 0 auto;
+		}
+	}
+}
+
+.menu_meta {
+	display: table;
+	table-layout: fixed;
+	width: 100%;
+
+	img {
+		display: block;
+	}
+}
+
+.menu_row {
+	margin-bottom: $grid;
+}
+
+.menu_title {
+	margin: 0 auto;
+	max-width: 877px; // Half of title image width
+
+	img {
+		display: block;
+	}
+}
