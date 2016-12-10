@@ -55,6 +55,19 @@
 	}
 }
 
+.step_continue {
+	@extend button;
+	@include transition(background, opacity);
+	margin-top: ($grid * 2);
+	opacity: 0;
+
+	.step.present & {
+		opacity: 1;
+		// Not using mixin here because of required delay
+		transition: background $transition-duration, opacity $transition-duration $transition-timing-function 2s;
+	}
+}
+
 .step_list {
 	li {
 		display: inline-block;
